@@ -1,31 +1,69 @@
-# # a=int(input("عدد اول:"))
-  
-# # b=int(input("عدد دوم :"))
+from datetime import datetime
 
-# # print("جمع:",a + b)
-# # print("تفریق", a -b)
-# # print("ضرب", a*b)
-# # print("تقسیم",a/b)ز
+history = []
 
+while True:
 
-# فقط گرفتن _commit کامیت 1
-a = int(input("عدد اول: "))
-amal=input("عملیات (+,-,*,/):")
-b=int(input("عدد دوم:"))
+    print("\n===== MENU =====")
+    print("c - Calculator")
+    print("h - History")
+    print("e - Exit")
 
-# کامیت 2 اضافه کردن جمع
-if amal == "+":
-    print("نتیجه",a+b)
-# کامیت 3 اضافه کردن منها
-if amal== "-":
-    print("نتیجه",a-b)
-# کامیت 4 اضافه کردن ضرب
-if amal=="*":
-    print("نتیجه",a*b)
-# کامیت 5 اضافه کردن تقسیم
-if amal == "/":
-    print("نتیجه",a / b)
-    
-    
-    
+    choice = input("Choose: ")
+
+    if choice == "e":
+        break
+
+    elif choice == "h":
+
+        print("\n===== HISTORY =====")
+
+        if len(history) == 0:
+            print("No history found.")
+
+        else:
+            for item in history:
+                print(item)
+
+        input("\nPress Enter to return...")
+
+    elif choice == "c":
+
+        a = int(input("First number: "))
+        amal = input("Operation (+,-,*,/): ")
+        b = int(input("Second number: "))
+
+        if amal == "+":
+            result = a + b
+
+        elif amal == "-":
+            result = a - b
+
+        elif amal == "*":
+            result = a * b
+
+        elif amal == "/":
+            result = a / b
+
+        else:
+            print("Invalid operation")
+            continue
+
+        print("Result:", result)
+
+        now = datetime.now()
+
+        record = (
+            f"Date: {now.strftime('%Y-%m-%d %H:%M:%S')} | "
+            f"Calculation: {a} {amal} {b} = {result}"
+        )
+
+        history.append(record)
+
+    else:
+        print("Invalid choice")
+        
+        
+        
+
 
