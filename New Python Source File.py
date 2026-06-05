@@ -1,3 +1,10 @@
+
+        
+        
+        
+        
+
+
 from datetime import datetime
 
 history = []
@@ -12,6 +19,7 @@ while True:
     choice = input("Choose: ")
 
     if choice == "e":
+        print("Goodbye!")
         break
 
     elif choice == "h":
@@ -25,7 +33,7 @@ while True:
             for item in history:
                 print(item)
 
-        input("\nPress Enter to return...")
+        input("\nPress Enter to return to menu...")
 
     elif choice == "c":
 
@@ -47,9 +55,10 @@ while True:
 
         else:
             print("Invalid operation")
+            input("\nPress Enter to return to menu...")
             continue
 
-        print("Result:", result)
+        print("\nResult:", result)
 
         now = datetime.now()
 
@@ -60,10 +69,9 @@ while True:
 
         history.append(record)
 
+        input("\nPress Enter to return to menu...")
+
     else:
         print("Invalid choice")
+        input("\nPress Enter to return to menu...")
         
-        
-        
-
-
