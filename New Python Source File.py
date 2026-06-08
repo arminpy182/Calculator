@@ -5,73 +5,73 @@
         
 
 
-from datetime import datetime
+# from datetime import datetime
 
-history = []
+# history = []
 
-while True:
+# while True:
 
-    print("\n===== MENU =====")
-    print("c - Calculator")
-    print("h - History")
-    print("e - Exit")
+#     print("\n===== MENU =====")
+#     print("c - Calculator")
+#     print("h - History")
+#     print("e - Exit")
 
-    choice = input("Choose: ")
+#     choice = input("Choose: ")
 
-    if choice == "e":
-        print("Goodbye!")
-        break
+#     if choice == "e":
+#         print("Goodbye!")
+#         break
 
-    elif choice == "h":
+#     elif choice == "h":
 
-        print("\n===== HISTORY =====")
+#         print("\n===== HISTORY =====")
 
-        if len(history) == 0:
-            print("No history found.")
+#         if len(history) == 0:
+#             print("No history found.")
 
-        else:
-            for item in history:
-                print(item)
+#         else:
+#             for item in history:
+#                 print(item)
 
-        input("\nPress Enter to return to menu...")
+#         input("\nPress Enter to return to menu...")
 
-    elif choice == "c":
+#     elif choice == "c":
 
-        a = int(input("First number: "))
-        amal = input("Operation (+,-,*,/): ")
-        b = int(input("Second number: "))
+#         a = int(input("First number: "))
+#         amal = input("Operation (+,-,*,/): ")
+#         b = int(input("Second number: "))
 
-        if amal == "+":
-            result = a + b
+#         if amal == "+":
+#             result = a + b
 
-        elif amal == "-":
-            result = a - b
+#         elif amal == "-":
+#             result = a - b
 
-        elif amal == "*":
-            result = a * b
+#         elif amal == "*":
+#             result = a * b
 
-        elif amal == "/":
-            result = a / b
+#         elif amal == "/":
+#             result = a / b
 
-        else:
-            print("Invalid operation")
-            input("\nPress Enter to return to menu...")
-            continue
+#         else:
+#             print("Invalid operation")
+#             input("\nPress Enter to return to menu...")
+#             continue
 
-        print("\nResult:", result)
+#         print("\nResult:", result)
 
-        now = datetime.now()
+#         now = datetime.now()
 
-        record = (
-            f"Date: {now.strftime('%Y-%m-%d %H:%M:%S')} | "
-            f"Calculation: {a} {amal} {b} = {result}"
-        )
+#         record = (
+#             f"Date: {now.strftime('%Y-%m-%d %H:%M:%S')} | "
+#             f"Calculation: {a} {amal} {b} = {result}"
+#         )
 
-        history.append(record)
+#         history.append(record)
 
-        input("\nPress Enter to return to menu...")
+#         input("\nPress Enter to return to menu...")
 
-    else:
-        print("Invalid choice")
-        input("\nPress Enter to return to menu...")
+#     else:
+#         print("Invalid choice")
+#         input("\nPress Enter to return to menu...")
         
